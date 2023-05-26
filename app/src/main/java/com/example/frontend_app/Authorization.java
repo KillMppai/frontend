@@ -56,6 +56,8 @@ public class Authorization extends AppCompatActivity {
                     String s = response.body().string();
                     Log.d("t", s);
                     Toast.makeText(Authorization.this, s, Toast.LENGTH_SHORT).show();
+                    Intent intent1488 = new Intent(Authorization.this, MainPage.class);
+                    startActivity(intent1488);
                 } catch (IOException e) {
                     throw new RuntimeException(e);
                 }

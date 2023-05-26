@@ -63,10 +63,11 @@ public class Register extends AppCompatActivity {
                         Intent intent1 = new Intent(Register.this, MainPage.class);
                         startActivity(intent1);
                     } else {
-                        Toast.makeText(Register.this, "иди нахуй", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(Register.this, "Неверная почта или пароль", Toast.LENGTH_SHORT).show();
+                        Intent intent228 = new Intent(Register.this, Register.class);
+                        startActivity(intent228);
                     }
                     Toast.makeText(Register.this, s, Toast.LENGTH_SHORT).show();
-
                 } catch (IOException e) {
                     throw new RuntimeException(e);
                 }
